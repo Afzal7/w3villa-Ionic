@@ -1,0 +1,47 @@
+#nav_bar .bar-header{
+	background-color:#D50000;
+	/background: linear-gradient(to left, #e53935, #D50000);
+	background: linear-gradient(to right, #D31027 , #EA384D);
+
+}
+#side_menu_header{
+	background: #f71200;
+	background: linear-gradient(to right, #cb2d3e , #ef473a);
+        
+}
+.login_view{
+	background : #f34541;
+	background: -webkit-linear-gradient(to top, #7b4397 , #dc2430);
+	background: linear-gradient(to top, #7b4397 , #dc2430);
+        
+}
+.logo{
+	width:45%;
+	float:right;
+}
+.center{
+	text-align:center;
+}
+#login_title{
+	padding:15% 0 5% 0;
+}
+.login_view h2, .login_view h4, .login_view span{
+	color:white;
+}
+input::-webkit-input-placeholder{
+	/color:black;
+} 
+.login_view .item {
+	margin-bottom:10px;
+	border-radius:3px;
+	box-shadow:0px 0px 10px rgba(255,255,255.0.5);
+}
+.custom_background{
+
+
+background: #D31027; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #D31027 , #EA384D); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #D31027 , #EA384D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+color:white;
+}

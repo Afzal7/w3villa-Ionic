@@ -1,0 +1,68 @@
+<ion-view view-title="Work Report">
+	<ion-content>
+		<div class='list-inset'>
+			<form ng-submit='wrCtrl.login()' name='wrForm'>
+				<div class='row padding'>
+			    	<span>Title</span>
+			    </div>
+			    <div class='row'>
+					<div class='col'>
+						<label class='item item-input'>
+							<input ng-model='wrCtrl.title' type='text' placeholder='Title' required>
+					    </label>
+					</div>
+			    </div>
+			    <br>
+			    <div class='row padding'>
+			    	<span>Today's Work</span>
+			    </div>
+			    <div class='row'>
+			    	<div class='col col-50'>
+						<label class='item item-input item-stacked-label'>
+							<input ng-model='wrCtrl.story_name' type='text' placeholder='Story Name' required>
+						</label>
+					</div>
+					<div class='col col-50'>
+						<label class='item item-input'>
+							<input ng-model='wrCtrl.time' type='number' placeholder='Time Spend (Hrs)'>
+						</label>
+					</div>
+				</div>
+				<div class='row'>
+					<div class='col'>
+						<label class='item item-input'>
+							<textarea ng-model='wrCtrl.breif' rows='5' placeholder='Breif'></textarea>
+						</label>
+					</div>
+				</div>
+				<br>
+				<div class='row padding'>
+			    	<span>Tomorrow's Plan</span>
+			    </div>
+			    <div class='row'>
+					<div class='col'>
+						<label class='item item-input'>
+							<textarea ng-model='wrCtrl.tomorrows_plan' rows='5' placeholder="What are your plans for tomorrow."></textarea>
+						</label>
+					</div>
+				</div>
+				<br>
+				<div class='row padding'>
+			    	<span>Blockers (if any)</span>
+			    </div>
+			    <div class='row'>
+					<div class='col'>
+						<label class='item item-input'>
+							<textarea ng-model='wrCtrl.blockers' rows='5' placeholder="Any Blockers"></textarea>
+						</label>
+					</div>
+				</div>
+				<div class='row'>
+			    	<div class='col'>
+			    		<button class='button button-block custom_background' type='submi' >Submit</button>
+			    	</div>
+			    </div>
+			</form>
+		</div>
+	</ion-content>
+</ion-view>
