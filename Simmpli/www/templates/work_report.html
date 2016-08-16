@@ -1,7 +1,7 @@
 <ion-view view-title="Work Report">
 	<ion-content>
 		<div class='list-inset'>
-			<form ng-submit='wrCtrl.login()' name='wrForm'>
+			<form ng-submit='wrCtrl.submit_work_report()' name='wrForm'>
 				<div class='row padding'>
 			    	<span>Title</span>
 			    </div>
@@ -16,25 +16,30 @@
 			    <div class='row padding'>
 			    	<span>Today's Work</span>
 			    </div>
-			    <div class='row'>
-			    	<div class='col col-50'>
-						<label class='item item-input item-stacked-label'>
-							<input ng-model='wrCtrl.story_name' type='text' placeholder='Story Name' required>
-						</label>
+				<div class='tw_container' ng-repeat = 'form in wrCtrl.tw_forms'>
+				    <div class='row'>
+				    	<div class='col col-50'>
+							<label class='item item-input item-stacked-label'>
+								<input ng-model='form.story_name' type='text' placeholder='Story Name' required>
+							</label>
+						</div>
+						<div class='col col-50'>
+							<label class='item item-input'>
+								<input ng-model='form.time' type='number' placeholder='Time Spend (Hrs)'>
+							</label>
+						</div>
 					</div>
-					<div class='col col-50'>
-						<label class='item item-input'>
-							<input ng-model='wrCtrl.time' type='number' placeholder='Time Spend (Hrs)'>
-						</label>
+					<div class='row'>
+						<div class='col'>
+							<label class='item item-input'>
+								<textarea ng-model='form.brief' rows='5' placeholder='Brief'></textarea>
+							</label>
+						</div>
 					</div>
 				</div>
-				<div class='row'>
-					<div class='col'>
-						<label class='item item-input'>
-							<textarea ng-model='wrCtrl.breif' rows='5' placeholder='Breif'></textarea>
-						</label>
-					</div>
-				</div>
+				<div class='row padding'>
+			    	<button ng-click='wrCtrl.add_tw_form()' class='button button-stable icon ion-plus-circled'> Add New</button>
+			    </div>
 				<br>
 				<div class='row padding'>
 			    	<span>Tomorrow's Plan</span>
@@ -59,7 +64,7 @@
 				</div>
 				<div class='row'>
 			    	<div class='col'>
-			    		<button class='button button-block custom_background' type='submi' >Submit</button>
+			    		<button class='button button-block custom_background' type='submit' >Submit</button>
 			    	</div>
 			    </div>
 			</form>

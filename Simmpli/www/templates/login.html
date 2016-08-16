@@ -3,8 +3,8 @@
 		<div class='col col-40'>
 			<img src='img/simmpli.png' class='logo'>
 		</div>
-		<div class='col col-60 col-center'>
-			<h2 class='title'>Simmpli</h2>
+		<div class='col col-75 col-center'>
+			<span id='title' class='title'>Simmpli</span>
 		</div>
 	</div>
 	<div class='row'>
@@ -26,7 +26,7 @@
 		        <label class='item item-input'>
 		        	<input ng-model='loginCtrl.password' type='password' placeholder='Password' required>
 		        </label>
-		        <button class='button button-block' type='submit' ng-disabled='loginForm.$invalid'>Submit</button>
+		        <button id='login_submit' class='button button-block' type='submit' ng-disabled='loginForm.$invalid'>Submit</button>
 			</form>
 		</div>
 	</div>

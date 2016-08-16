@@ -41,7 +41,8 @@ angular.module('starter', ['ionic','ngStorage'])
             url : '/WorkReport',
             views : {
                 'menuContent' : {
-                    templateUrl : 'templates/work_report.html'
+                    templateUrl : 'templates/work_report.html',
+                    controller : 'workReportController as wrCtrl'
                 }
             }
         })
@@ -87,5 +88,20 @@ angular.module('starter', ['ionic','ngStorage'])
         else{
             loginCtrl.login_status = 'Invalid Username or Password !';
         }
+    };
+})
+
+.controller('workReportController', function($state, $window){
+    var wrCtrl = this;
+
+    wrCtrl.tw_forms = [{id:0, story_name:'', time:'', brief:''}];
+
+    wrCtrl.add_tw_form = function(){
+        wrCtrl.tw_forms.push({id:wrCtrl.tw_forms[wrCtrl.tw_forms.length-1].id+1, story_name:'', time:'', brief:''});
+    };
+
+    wrCtrl.submit_work_report = function(){
+        console.log(wrCtrl.title);
+        console.log(wrCtrl.tw_forms);
     };
 });
